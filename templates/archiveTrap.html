@@ -2,11 +2,14 @@
 
 {% block body %}
 
-<div class='cont'>
-	<img class='zoom' src='https://lh6.ggpht.com/UOt1IPPKSBiBETaKpOWY8Qr1TK8IsUgGLuVsF8MLG9Do75plICLPDuq4-9hVhWRXwqa4=w300'>
-	<img class='zoom move' src='https://lh6.ggpht.com/UOt1IPPKSBiBETaKpOWY8Qr1TK8IsUgGLuVsF8MLG9Do75plICLPDuq4-9hVhWRXwqa4=w300'>
-	<img class='zoom move' src='https://lh6.ggpht.com/UOt1IPPKSBiBETaKpOWY8Qr1TK8IsUgGLuVsF8MLG9Do75plICLPDuq4-9hVhWRXwqa4=w300'>
-	<img class='zoom move' src='https://lh6.ggpht.com/UOt1IPPKSBiBETaKpOWY8Qr1TK8IsUgGLuVsF8MLG9Do75plICLPDuq4-9hVhWRXwqa4=w300'>
+<div class='cont' ondrop="drop(event)" ondragover="allowDrop(event)">
+	<img class='zoom' draggable="true" ondragstart="drag(event)" src='https://lh6.ggpht.com/UOt1IPPKSBiBETaKpOWY8Qr1TK8IsUgGLuVsF8MLG9Do75plICLPDuq4-9hVhWRXwqa4=w300'>
+	<img class='zoom move' draggable="true" ondragstart="drag(event)" src='https://lh6.ggpht.com/UOt1IPPKSBiBETaKpOWY8Qr1TK8IsUgGLuVsF8MLG9Do75plICLPDuq4-9hVhWRXwqa4=w300'>
+	<img class='zoom move' draggable="true" ondragstart="drag(event)" src='https://lh6.ggpht.com/UOt1IPPKSBiBETaKpOWY8Qr1TK8IsUgGLuVsF8MLG9Do75plICLPDuq4-9hVhWRXwqa4=w300'>
+	<img class='zoom move' draggable="true" ondragstart="drag(event)" src='https://lh6.ggpht.com/UOt1IPPKSBiBETaKpOWY8Qr1TK8IsUgGLuVsF8MLG9Do75plICLPDuq4-9hVhWRXwqa4=w300'>
+</div>
+<div class='conttwo' ondrop="drop(event)" ondragover="allowDrop(event)">
+	
 </div>
 
 {% endblock %}
