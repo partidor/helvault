@@ -1,0 +1,24 @@
+body {
+	
+}
+
+.cont {
+	white-space: nowrap;
+	z-index: 1;
+}
+
+.cont img{
+	display:inline;
+	vertical-align: top;
+}
+
+.move{
+
+	margin-left:-100px;
+
+}
+
+.zoom{
+	position: relative;
+	
+}
