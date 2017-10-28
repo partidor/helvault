@@ -1,15 +1,76 @@
 {% extends 'layout.html' %}
 
 {% block body %}
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
 
-<div class='cont' ondrop="drop(event)" ondragover="allowDrop(event)">
-	<img class='zoom' draggable="true" ondragstart="drag(event)" src='https://lh6.ggpht.com/UOt1IPPKSBiBETaKpOWY8Qr1TK8IsUgGLuVsF8MLG9Do75plICLPDuq4-9hVhWRXwqa4=w300'>
-	<img class='zoom move' draggable="true" ondragstart="drag(event)" src='https://lh6.ggpht.com/UOt1IPPKSBiBETaKpOWY8Qr1TK8IsUgGLuVsF8MLG9Do75plICLPDuq4-9hVhWRXwqa4=w300'>
-	<img class='zoom move' draggable="true" ondragstart="drag(event)" src='https://lh6.ggpht.com/UOt1IPPKSBiBETaKpOWY8Qr1TK8IsUgGLuVsF8MLG9Do75plICLPDuq4-9hVhWRXwqa4=w300'>
-	<img class='zoom move' draggable="true" ondragstart="drag(event)" src='https://lh6.ggpht.com/UOt1IPPKSBiBETaKpOWY8Qr1TK8IsUgGLuVsF8MLG9Do75plICLPDuq4-9hVhWRXwqa4=w300'>
-</div>
-<div class='conttwo' ondrop="drop(event)" ondragover="allowDrop(event)">
-	
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+
+<div class="container-fluid mx-auto w-100" style="height:570px;">
+	<div class="row h-80" style="background-color: green">
+		<div class="col-9 m-0 p-0 w-100" style="background-color: lightblue">
+			<div class="row mx-auto" style="background-color: orange; height:410px;">
+				<div class="col-8 mx-auto px-0 w-100" style="background-color: grey; overflow-y: scroll; overflow-x: none;">
+				<div class="w-100" style="height: 50px; background-color: cyan;">
+					SEARCH BAR
+				</div>
+					Scryfall Search
+					<div class="row mx-auto">
+					{% for card in cards %}
+
+					<div class="col-3">
+						<figure class="figure">
+						<div>
+							<img src={{card.s_img}} alt={{card.name}} class="figure-img rounded zoom" draggable="true" ondragstart="drag(event)" width="146" height="204">
+						</div>
+						</figure>
+					</div>
+
+						{% if loop.index % 4 == 0 %}
+				</div>
+				<div class="row mx-auto" style="margin-top:-150px;">
+						{% endif %}
+
+					{% endfor %}
+					</div>
+				</div>
+				<div class="col mx-0" style="background-color: yellow;">
+					Oracle Text
+				</div>
+			</div>
+		</div>
+		<div class="col" style="background-color: lightgreen; height:410px;">
+			<div>
+				<div class="row m-1">
+					Main Picture
+				</div>
+				<div class="row m-1">
+					Set Selector
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="background-color: blue; height:210px;">
+		<div class="container-fluid w-100 h-100" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div ondrop="drop(event)" ondragover="allowDrop(event)">
+
+			</div>
+
+		</div>
+	</div>
+
 </div>
 
 {% endblock %}
