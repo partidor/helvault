@@ -1,15 +1,14 @@
-html, body {
-	height: 100%;
-}
 body {
-	padding-top: 100px;
 	width: 100%;
 }
 
 .navbar {
-	top: 37px;
 }
 
 .zoom {
 	position: relative;
+}
+
+.card-display {
+	border-radius: .50rem!important;
 }
