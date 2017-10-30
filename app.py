@@ -1,14 +1,25 @@
 #!/usr/bin/env python
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
 from data import CardSearch
 import os
 
-Cards = CardSearch()
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
+	#search_string = request.form['search_string']
+	#Process search string -> url for Scryfall API
+	Cards = CardSearch('')
+	#return render_template('archiveTrap.html')
+	return render_template('archiveTrap.html', cards = Cards)
+
+@app.route('/search', methods=['GET', 'POST'])
+def search_data():
+	search_string = request.form['search_string']
+	print search_string
+	#Process search string -> url for Scryfall API
+	Cards = CardSearch(search_string)
 	return render_template('archiveTrap.html', cards = Cards)
 
 @app.context_processor
