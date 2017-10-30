@@ -1,22 +1,6 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<script>
-function allowDrop(ev) {
-    ev.preventDefault();
-}
-
-function drag(ev) {
-    ev.dataTransfer.setData("image/jpeg", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("image/jpeg");
-    ev.target.appendChild(document.getElementById(data));
-}
-</script>
-
 
 <div class="container-fluid mx-auto w-100" style="height:570px;">
 	<div class="row h-80" style="background-color: green">
@@ -24,7 +8,7 @@ function drop(ev) {
 			<div class="row mx-auto" style="background-color: orange; height:410px;">
 				<div class="col-8 mx-auto px-0 w-100" style="background-color: grey; overflow-y: scroll; overflow-x: none;">
 				<div class="w-100" style="height: 50px; background-color: cyan;">
-					<!--<form action="{{ url_for('search_data') }}" method="post" class="form-inline">-->
+					<!--<form action="{{ url_for('search') }}" method="post" class="form-inline">-->
 					<form action="{{ url_for('search') }}" method="post" class="form-inline">
 					<div class="form-group row w-100 pt-1">
 						<label for="scryfallSearchBox" class="align-middle col-3">Search Scryfall:&nbsp;&nbsp;</label>
@@ -37,9 +21,11 @@ function drop(ev) {
 
 					<div class="col-3 px-1 pt-3">
 						<figure class="figure">
-						<div>
-							<img src={{card.s_img}} alt={{card.name}} class="figure-img rounded card-display zoom" draggable="true" ondragstart="drag(event)" width="146" height="204">
+						<!--<div class="content" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:146px; height:204px;">-->
+						<div data-draggable="target" style="height: 204px; width: 146px;">
+							<img src={{card.s_img}} alt={{card.name}} oracle="{{card.oracle_text}}" data-draggable="item" class="figure-img rounded card-display zoom">
 						</div>
+						<!--</div>-->
 						</figure>
 					</div>
 
@@ -47,7 +33,6 @@ function drop(ev) {
 				</div>
 				<div class="row mx-auto" style="margin-top:-150px;">
 						{% endif %}
-
 					{% endfor %}
 					</div>
 				</div>
@@ -67,13 +52,14 @@ function drop(ev) {
 			</div>
 		</div>
 	</div>
-	<div class="row fixed-bottom" style="background-color: blue; height:180px;">
-		<div class="container-fluid w-100 h-100" ondrop="drop(event)" ondragover="allowDrop(event)">
-			<div>
-
-			</div>
+	<div class="fixed-bottom" style="background-color: blue; height:214px; padding-left:20px; overflow-y:hidden; overflow-x: auto; white-space: nowrap;">
+		<!--<div class="content card-holder">-->
+		{% set max = 20 %}
+		{% for i in range(0, max)%}
+		<div class="card-holder holder-ident-{{ loop.index }}" data-draggable="target" style="display: inline-block; float:none; vertical-align:top;">
 
 		</div>
+		{% endfor %}
 	</div>
 
 </div>

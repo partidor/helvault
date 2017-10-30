@@ -11,4 +11,14 @@ body {
 
 .card-display {
 	border-radius: .50rem!important;
+	width: 146px;
+	height: 204px;
+}
+
+.card-holder {
+	border:1px solid black;
+	margin-top: 4px;
+	margin-left: 15px;
+	height: 206px;
+	width: 148px;
 }

@@ -15,7 +15,7 @@ def index():
 	return render_template('archiveTrap.html', cards = Cards)
 
 @app.route('/search', methods=['GET', 'POST'])
-def search_data():
+def search():
 	search_string = request.form['search_string']
 	print search_string
 	#Process search string -> url for Scryfall API

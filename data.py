@@ -36,18 +36,28 @@ def CardSearch(q):
 
 	data = json.loads(resp.read())
 
-	#print json.dumps(data, indent=4)
+	print json.dumps(data, indent=4)
 	if data['object'] == "error":
 		print 'ERROR'
-		return ['Error has occured in card search']
+		return cardList
 
 	for c in data['data']:
+		cimage_small = ""
+		cimage_large = ""
 		ot = ""
 		try:
 			ot = c['oracle_text']
 		except:
 			pass
-		n = Card(c['name'], c['set'], ot, c['image_uris']['small'], c['image_uris']['large'])
+		if 'card_faces' in c:
+			#print "DOUBLE FACE ALERT"
+			cimage_small = c['card_faces'][0]['image_uris']['normal']
+			cimage_large = c['card_faces'][0]['image_uris']['large']
+		else:
+			cimage_small = c['image_uris']['normal']
+			cimage_small = c['image_uris']['large']
+
+		n = Card(c['name'], c['set'], ot, cimage_small, cimage_large)
 		cardList.append(n)
 
 	##for c in cardList:
@@ -56,4 +66,4 @@ def CardSearch(q):
 	return cardList
 
 if __name__ == '__main__':
-	print CardSearch("")
+	print CardSearch("vance's blasting cannons")
