@@ -5,6 +5,7 @@
 		<title>Archive Trap</title>
 		<link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="{{ url_for('static',filename='styles/archiveTrap.css')}}">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 	<body>
 		{% include 'includes/_navbar.html' %}
@@ -14,5 +15,6 @@
 		<script src="https://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
 		<script type="text/javascript" src="{{url_for('static', filename='javascript/cardZoom.js')}}"></script>
 		<script type="text/javascript" src="{{url_for('static', filename='javascript/cardDrag.js')}}"></script>
+		<script type="text/javascript" src="{{url_for('static', filename='javascript/cardSelect.js')}}"></script>
 	</body>
 </html>

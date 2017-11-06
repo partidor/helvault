@@ -23,7 +23,7 @@
 						<figure class="figure">
 						<!--<div class="content" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:146px; height:204px;">-->
 						<div data-draggable="target" style="height: 204px; width: 146px;">
-							<img src={{card.s_img}} alt={{card.name}} oracle="{{card.oracle_text}}" data-draggable="item" class="figure-img rounded card-display zoom">
+							<img src={{card.s_img}} alt={{card.name}} oracle="{{card.oracle_text}}" data-draggable="item" class="figure-img rounded card-display zoom card-click">
 						</div>
 						<!--</div>-->
 						</figure>
@@ -36,7 +36,7 @@
 					{% endfor %}
 					</div>
 				</div>
-				<div class="col mx-0" style="background-color: yellow;">
+				<div id="oracle-text-box" class="col mx-0" style="background-color: yellow;">
 					Oracle Text
 				</div>
 			</div>
