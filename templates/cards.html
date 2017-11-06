@@ -1,0 +1,20 @@
+<label id="card_data">
+	<div class="row mx-auto">
+	{% for card in cards %}
+	<div class="col-3 px-1 pt-3">
+		<figure class="figure">
+		<!--<div class="content" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:146px; height:204px;">-->
+		<div data-draggable="target" style="height: 204px; width: 146px;">
+			<img src={{card.s_img}} alt={{card.name}} oracle="{{card.oracle_text}}" data-draggable="item" class="figure-img rounded card-display zoom card-click">
+		</div>
+		<!--</div>-->
+		</figure>
+	</div>
+
+		{% if loop.index % 4 == 0 %}
+</div>
+<div class="row mx-auto" style="margin-top:-150px;">
+		{% endif %}
+	{% endfor %}
+</div>
+</label>

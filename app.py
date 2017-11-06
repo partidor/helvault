@@ -16,11 +16,11 @@ def index():
 
 @app.route('/search', methods=['GET', 'POST'])
 def search():
-	search_string = request.form['search_string']
+	search_string = request.args.get('jsdata')
 	print search_string
 	#Process search string -> url for Scryfall API
 	Cards = CardSearch(search_string)
-	return render_template('archiveTrap.html', cards = Cards)
+	return render_template('cards.html', cards = Cards)
 
 @app.context_processor
 def overide_url_for():
