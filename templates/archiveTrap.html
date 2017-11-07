@@ -2,11 +2,11 @@
 
 {% block body %}
 
-<div class="container-fluid mx-auto w-100" style="height:570px;">
-	<div class="row h-80" style="background-color: green">
-		<div class="col-9 m-0 p-0 w-100" style="background-color: lightblue">
-			<div class="row mx-auto" style="background-color: orange; height:410px;">
-				<div class="col-8 mx-auto px-0 w-100" style="background-color: grey; overflow-y: scroll; overflow-x: none;">
+<div class="container-fluid mx-auto w-100" style="overflow-y:none;">
+	<div class="row h-100 w-100" style="background-color: green; overflow-y:none; position:fixed; ">
+		<div class="col-9 m-0 p-0 w-100" style="background-color: lightblue;">
+			<div class="row mx-auto h-100" style="background-color: orange;">
+				<div class="col-8 mx-auto px-0 w-100" style="margin-bottom: 250px;background-color: grey; overflow-y: scroll; overflow-x: none;">
 					<div class="w-100" style="height: 50px; background-color: cyan;">
 						<!--<form action="{{ url_for('search') }}" method="post" class="form-inline">-->
 							<!-- <form action="{{ url_for('search') }}" method="post" class="form-inline">-->
