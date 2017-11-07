@@ -10,9 +10,9 @@ app = Flask(__name__)
 def index():
 	#search_string = request.form['search_string']
 	#Process search string -> url for Scryfall API
-	Cards = CardSearch('')
+	#Cards = CardSearch('')
 	#return render_template('archiveTrap.html')
-	return render_template('archiveTrap.html', cards = Cards)
+	return render_template('archiveTrap.html')
 
 @app.route('/search', methods=['GET', 'POST'])
 def search():

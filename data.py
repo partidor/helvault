@@ -30,13 +30,12 @@ def CardSearch(q):
 	url=urlparse.urlunsplit((parse.scheme, parse.netloc, parse.path, user_url, parse.fragment))
 
 	print url
-		
 
 	resp = urllib.urlopen(url)
 
 	data = json.loads(resp.read())
 
-	print json.dumps(data, indent=4)
+	#print json.dumps(data, indent=4)
 	if data['object'] == "error":
 		print 'ERROR'
 		return cardList

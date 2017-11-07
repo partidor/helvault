@@ -11,7 +11,7 @@
 						<!--<form action="{{ url_for('search') }}" method="post" class="form-inline">-->
 							<!-- <form action="{{ url_for('search') }}" method="post" class="form-inline">-->
 							<div class="form-group row w-100 pt-1">
-								<label for="scryfallSearchBox" class="align-middle col-3">Search Scryfall:&nbsp;&nbsp;</label>
+								<label for="scryfallSearchBox" class="align-middle col-3" style="padding-top: 10px;">Search Scryfall:&nbsp;&nbsp;</label>
 								<input type="text" class="form-control col-9" id="scryfall_search_box" name="search_string" inplaceholder="Example: id=w cmc<=3">
 							</div>
 						<!--</form>-->
@@ -31,7 +31,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="fixed-bottom" style="background-color: blue; height:214px; padding-left:20px; overflow-y:hidden; overflow-x: auto; white-space: nowrap;">
+	<div id="slide_deck" class="fixed-bottom" style="background-color: blue; height:214px; padding-left:20px; overflow-y:hidden; overflow-x: auto; white-space: nowrap;">
 		<!--<div class="content card-holder">-->
 		{% set max = 20 %}
 		{% for i in range(0, max)%}

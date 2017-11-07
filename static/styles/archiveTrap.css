@@ -29,8 +29,19 @@ body {
 
 .card-holder {
 	border:1px solid black;
+	border-radius :.50rem!important;
 	margin-top: 4px;
 	margin-left: 15px;
 	height: 206px;
 	width: 148px;
+}
+
+.card-selected {
+	border:1px solid #FF6347;
+	border-radius :.50rem!important;
+	margin-top: 4px;
+	margin-left: 15px;
+	height: 206px;
+	width: 148px;
+	background-color: #FF6347
 }

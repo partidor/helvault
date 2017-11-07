@@ -8,10 +8,14 @@ $("#scryfall_search_box").keypress(function(e){
 			data: {jsdata: search_query},
 			success: function(response) {
 				$("#place_for_cards").html(response);
+				$.getScript('/static/javascript/cardDrag.js');
+				$.getScript('/static/javascript/cardZoom.js');
+				$.getScript('/static/javascript/cardSelect.js');
+				$.getScript('/static/javascript/cardTraversal.js');
 			},
 			error: function(xhr) {
 			       	console.log("Search Error!!")
-			       }
+		       }
 		});
 	}
 });
