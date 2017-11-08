@@ -6,6 +6,8 @@ $('.card-click').on('click',function(){
 	var large_img = $(this).attr('src');
 	$('#large-image-box').attr('src', large_img);
 
+	console.log("Card Selected")
+
 	if($(this).parent().hasClass('card-holder')){
 		$(this).parent().removeClass('card-holder');
 		$(this).parent().addClass('card-selected');
