@@ -1,18 +1,21 @@
-$('.card-click').on('click',function(){
+$(document).ready(function () {
+	var d = new Date();
+	$('.card-click').on('click',function(){
 
-	var oracle_text = $(this).attr('oracle');
-	$('#oracle-text-box').html(oracle_text);
+		var oracle_text = $(this).attr('oracle');
+		$('#oracle-text-box').html(oracle_text);
 
-	var large_img = $(this).attr('src');
-	$('#large-image-box').attr('src', large_img);
+		var large_img = $(this).attr('src');
+		$('#large-image-box').attr('src', large_img+d.getTime());
 
-	console.log("Card Selected")
+		console.log("Card Selected")
 
-	if($(this).parent().hasClass('card-holder')){
-		$(this).parent().removeClass('card-holder');
-		$(this).parent().addClass('card-selected');
-		$(this).parent().siblings().removeClass('card-selected');
-		$(this).parent().siblings().addClass('card-holder');
-	}
+		if($(this).parent().hasClass('card-holder')){
+			$(this).parent().removeClass('card-holder');
+			$(this).parent().addClass('card-selected');
+			$(this).parent().siblings().removeClass('card-selected');
+			$(this).parent().siblings().addClass('card-holder');
+		}
 
+	});
 });
