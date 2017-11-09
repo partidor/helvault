@@ -15,8 +15,8 @@ $(document).ready(function () {
 	    document.addEventListener('dragstart', function(e)
 	    {
 		item = e.target;
-		
-		e.dataTransfer.setData('text', '');
+
+		e.dataTransfer.setData('html');
 	    
 	    }, false);
 
@@ -33,9 +33,9 @@ $(document).ready(function () {
 	    {
 		if(e.target.getAttribute('data-draggable') == 'target')
 		{
-		    e.target.appendChild(item);
-		    
 		    e.preventDefault();
+
+		    e.target.appendChild(item);
 		}
 	    
 	    }, false);
