@@ -20,12 +20,17 @@ body {
 }
 
 .card-display-large {
-	border-radius: .60rem!important;
+	border-radius: .90rem!important;
 	width: 250px;
 	height: 349px;
 	
 }
 
+.card-display-large {
+	vertical-align: middle;
+	display:block;
+	margin:auto;
+}
 .oracle-font {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 0.875em;
@@ -47,4 +52,34 @@ body {
 	margin-left: 15px;
 	height: 206px;
 	width: 148px;
+}
+
+.style-navbar {
+	font-family: 'Helvetica', sans-serif;
+	background-color: #1D3461;
+	color: #F0F7F4;
+}
+
+.style-search-bar {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #247BA0;
+	color: #F0F7F4;
+}
+
+.style-card-area {
+	background-color: #F0F7F4;
+}
+
+.style-slide-deck {
+	border-top:1px solid #9CAEA9;
+	background-color: #247BA0;
+}
+
+.style-oracle-text {
+	border:1px solid #9CAEA9;
+	background-color: #F0F7F4;
+}
+
+.style-display-image {
+	background-color: #247BA0;
 }
