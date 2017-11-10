@@ -1,51 +1,36 @@
 $(document).ready(function () {
-	(function()
-	{
+	$('.card-draggable').draggable({
+		helper:"clone",
+		revert:"invalid",
+		scroll:false,
+		containment:"document",
+		appendTo:"body",
+		zIndex:1000
+	});	
 
-	    if(!document.querySelectorAll || !('draggable' in document.createElement('span')) || window.opera) 
-	    { return; }
-	    
-	    for(var items = document.querySelectorAll('[data-draggable="item"]'), len = items.length, i = 0; i < len; i ++)
-	    {
-		items[i].setAttribute('draggable', 'true');
-	    }
+	$('.card-draggable-deck').draggable({
+		helper:"original",
+		revert:"invalid",
+		scroll:false,
+		containment:"document",
+		appendTo:"body",
+		zIndex:1000
+	});	
 
-	    var item = null;
-
-	    document.addEventListener('dragstart', function(e)
-	    {
-		item = e.target;
-
-		e.dataTransfer.setData('html');
-	    
-	    }, false);
-
-	    document.addEventListener('dragover', function(e)
-	    {
-		if(item)
+	$('.card-holder').droppable({
+		drop:function(event, ui) 
 		{
-		    e.preventDefault();
+			ui.draggable = ui.draggable.clone();
+			if($(this).find('img').length)
+			{
+				$(this).find('img').replaceWith($(ui.draggable));
+			}
+			else
+			{
+				$(this).append($(ui.draggable));
+			}
+			$.getScript('/static/javascript/cardSelect.js');
+			$.getScript('/static/javascript/cardDrag.js');
 		}
-	    
-	    }, false);  
-
-	    document.addEventListener('drop', function(e)
-	    {
-		if(e.target.getAttribute('data-draggable') == 'target')
-		{
-		    e.preventDefault();
-
-		    e.target.appendChild(item);
-		}
-	    
-	    }, false);
-	    
-	    document.addEventListener('dragend', function(e)
-	    {
-		item = null;
-	    
-	    }, false);
-
-	})();
-
+	});
 });

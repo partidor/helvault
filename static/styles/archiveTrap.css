@@ -73,6 +73,7 @@ body {
 .style-slide-deck {
 	border-top:1px solid #9CAEA9;
 	background-color: #247BA0;
+	z-index: 1;
 }
 
 .style-oracle-text {
