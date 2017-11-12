@@ -17,7 +17,29 @@ $(document).ready(function () {
 		zIndex:1000
 	});	
 
+	var lock = false;
 	$('.card-holder').droppable({
+		over:function(event, ui)
+		{
+			console.log('drag over cardDrag.js');
+			if (!lock)
+			{
+
+				var b = document.getElementById("slide_deck");
+				console.log(b.getElementsByClassName("card-holder").children);
+				var h = b.getElementsByClassName("card-holder")[0].cloneNode();
+				console.log(h);
+				if (h.children.length === 0)
+				{
+					b.append(h);
+					lock = true;
+				}	
+			}
+		},
+		out:function(event, ui)
+		{
+			console.log('out');
+		},
 		drop:function(event, ui) 
 		{
 			ui.draggable = ui.draggable.clone();

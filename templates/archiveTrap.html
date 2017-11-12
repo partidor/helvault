@@ -28,14 +28,11 @@
 			</div>
 		</div>
 	</div>
-	<div id="slide_deck" class="fixed-bottom style-slide-deck" style="height:214px; padding-left:20px; overflow-y:hidden; overflow-x: auto; white-space: nowrap;">
+	<div id="slide_deck" class="fixed-bottom style-slide-deck" style="height:214px; padding-left:20px; padding-right:20px;  overflow-y:hidden; overflow-x: auto; white-space: nowrap;">
 		<!--<div class="content card-holder">-->
-		{% set max = 20 %}
-		{% for i in range(0, max)%}
-		<div class="card-holder holder-ident-{{ loop.index }}" data-draggable="target" style="display: inline-block; float:none; vertical-align:top;">
+		<div class="card-holder holder-ident" data-draggable="target" style="display: inline-block; float:none; vertical-align:top;">
 
 		</div>
-		{% endfor %}
 	</div>
 
 </div>

@@ -24,7 +24,7 @@ body {
 }
 
 .card-draggable-deck {
-	width:146px;
+	width:143px;
 	height:204px;
 }
 
@@ -48,12 +48,12 @@ body {
 }
 
 .card-holder {
-	border:1px solid black;
+	/* border:1px solid black; */
 	border-radius :.50rem!important;
 	margin-top: 4px;
 	margin-left: 15px;
-	height: 206px;
-	width: 148px;
+	height: 204px;
+	width: 143px;
 }
 
 .card-selected {
@@ -62,7 +62,7 @@ body {
 	margin-top: 4px;
 	margin-left: 15px;
 	height: 206px;
-	width: 148px;
+	width: 146px;
 }
 
 .style-navbar {
@@ -82,7 +82,7 @@ body {
 }
 
 .style-slide-deck {
-	background-color: #247BA0;
+	background-color: #1c607d;
 	z-index: 1;
 }
 
