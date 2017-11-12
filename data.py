@@ -68,10 +68,10 @@ def CardSearch(q):
 				cimage_large = c['card_faces'][0]['image_uris']['large']
 			else:
 				cimage_small = c['image_uris']['normal']
-				cimage_small = c['image_uris']['large']
+				cimage_large = c['image_uris']['large']
 		else:
 			cimage_small = c['image_uris']['normal']
-			cimage_small = c['image_uris']['large']
+			cimage_large = c['image_uris']['large']
 
 		n = Card(c['name'], c['set'], ot, cimage_small, cimage_large)
 		cardList.append(n)

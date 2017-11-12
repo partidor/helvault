@@ -9,7 +9,7 @@ $(document).ready(function () {
 	});	
 
 	$('.card-draggable-deck').draggable({
-		helper:"original",
+		helper:"clone",
 		revert:"invalid",
 		scroll:false,
 		containment:"document",
@@ -24,10 +24,14 @@ $(document).ready(function () {
 			if($(this).find('img').length)
 			{
 				$(this).find('img').replaceWith($(ui.draggable));
+				$(this).find('img').removeClass('card-draggable');
+				$(this).find('img').addClass('card-draggable-deck');
 			}
 			else
 			{
 				$(this).append($(ui.draggable));
+				$(this).find('img').removeClass('card-draggable');
+				$(this).find('img').addClass('card-draggable-deck');
 			}
 			$.getScript('/static/javascript/cardSelect.js');
 			$.getScript('/static/javascript/cardDrag.js');
