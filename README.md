@@ -12,8 +12,11 @@ Specifically, Helvault is a utility that allows you to search for cards using [S
 My intent for Helvault was to help make video production easier for content producers. For example, if you are doing a live deck tech of paper MTG cards, you can set up Helvault with the cards you are talking about in the order you wish to describe them. That way, while the audience can still see your paper deck, they can have an easier time reading the cards you are referencing without having to deal with variables like sleeve glare, and movement of the cards. This could apply to live recording of podcasts that talk about cards, gameplays, live streams, etc. 
 
 Controls are straight-forward:
+
 > Spacebar or right-arrow: Next slide
+
 > left-arrow: Previous Slide
+
 > Ctrl-click: Delete Slide
 
 If you have never used Scryfall before, their search syntax guide can be found [here](https://scryfall.com/docs/reference).
