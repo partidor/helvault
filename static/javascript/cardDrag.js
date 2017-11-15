@@ -28,9 +28,12 @@ $(document).ready(function () {
 				var b = document.getElementById("slide_deck");
 				console.log(b.getElementsByClassName("card-holder").children);
 				var h = b.getElementsByClassName("card-holder")[0].cloneNode();
+				var s = b.getElementsByClassName("card-spacer")[0].cloneNode();
 				console.log(h);
+				console.log(s);
 				if (h.children.length === 0)
 				{
+					b.append(s);
 					b.append(h);
 					lock = true;
 				}	

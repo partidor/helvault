@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 		if (e.shiftKey)
 		{
-			if ($(this).parent().parent().is('#slide_deck'))
+			if ($(this).parent().hasClass('card-holder'))
 			{
 				$(this).parent().remove();
 			}
@@ -18,10 +18,9 @@ $(document).ready(function () {
 			$('#large-image-box').attr('src', large_img+d.getTime());
 
 			if($(this).parent().hasClass('card-holder')){
-				$(this).parent().removeClass('card-holder');
 				$(this).parent().addClass('card-selected');
+				$(this).parent().siblings('.card-selected').addClass('card-holder');
 				$(this).parent().siblings().removeClass('card-selected');
-				$(this).parent().siblings().addClass('card-holder');
 			}
 		}
 
