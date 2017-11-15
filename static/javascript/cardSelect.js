@@ -4,9 +4,13 @@ $(document).ready(function () {
 
 		if (e.shiftKey)
 		{
-			if ($(this).parent().hasClass('card-holder'))
+			if (!$(this).parent().hasClass('card-selected'))
 			{
-				$(this).parent().remove();
+				if ($(this).is('img'))
+				{
+					$(this).parent().prevAll('.card-spacer').first().remove();
+					$(this).parent().remove();
+				}
 			}
 		}
 		else

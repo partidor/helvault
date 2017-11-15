@@ -23,13 +23,19 @@ body {
 	*/
 }
 
+.card-holder {
+	/* DEBUG */
+	/*background-color: green;*/
+}
+
 .card-spacer {
-	width:15px;
-	width: 15px;
+	width:20px;
 	height: 204px;
 	margin:0;
 	display:inline-block;
 	float:none;
+	/* DEBUG */
+	/*background-color:orange;*/
 }
 
 .card-draggable-deck {
