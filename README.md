@@ -14,10 +14,10 @@ My intent for Helvault was to help make video production easier for content prod
 Controls are straight-forward:
 
 > Spacebar or right-arrow: Next slide
-
-  left-arrow: Previous Slide
-
-  Shift-click: Delete Slide
+> 
+> left-arrow: Previous Slide
+> 
+> Shift-click: Delete Slide
 
 If you have never used Scryfall before, their search syntax guide can be found [here](https://scryfall.com/docs/reference).
 
