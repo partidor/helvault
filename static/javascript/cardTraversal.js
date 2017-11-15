@@ -1,23 +1,16 @@
 $(document).ready(function () {
 	$(document).unbind('keydown').bind('keydown', function (e) {
-		console.log("Pre IF")
 		var d = new Date();
 		if (e.keyCode === 0 || e.keyCode === 32 || e.keyCode === 39) {
 			if (document.activeElement.nodeName.toLowerCase() != "input") 
 			{
-				console.log("Post IF")
 				e.preventDefault();
 				var slideDeck = $('#slide_deck');
 				var firstCard = slideDeck.find('.card-selected');
 				var nextSlide = firstCard.next('.card-holder');
-				//console.log(firstCard);
-				//console.log(nextSlide);
 				if (firstCard[0] != undefined) {
-					console.log(nextSlide);
 					if (nextSlide[0].childElementCount === 1)
 					{
-						//firstCard.removeClass('card-selected');
-						//firstCard.addClass('card-holder');
 						nextSlide.removeClass('card-holder');
 						nextSlide.addClass('card-selected');
 						nextSlide.siblings().removeClass('card-selected');
@@ -54,7 +47,6 @@ $(document).ready(function () {
 				var firstCard = slideDeck.find('.card-selected');
 				var nextSlide = firstCard.prev('.card-holder');
 				if (firstCard[0] != undefined) {
-					console.log(nextSlide);
 					if (nextSlide[0] != undefined && nextSlide[0].childElementCount === 1)
 					{
 						nextSlide.removeClass('card-holder');

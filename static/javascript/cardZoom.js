@@ -1,8 +1,6 @@
 $(document).ready(function () {
 	var x = document.getElementsByClassName("zoom");
 
-	console.log(x.length);
-
 	for(i=0; i<x.length; i++){
 		console.log(x[i])
 		x[i].addEventListener("mouseover", incZ);
