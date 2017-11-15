@@ -15,9 +15,9 @@ Controls are straight-forward:
 
 > Spacebar or right-arrow: Next slide
 
-> left-arrow: Previous Slide
+  left-arrow: Previous Slide
 
-> Ctrl-click: Delete Slide
+  Shift-click: Delete Slide
 
 If you have never used Scryfall before, their search syntax guide can be found [here](https://scryfall.com/docs/reference).
 
