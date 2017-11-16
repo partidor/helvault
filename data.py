@@ -66,6 +66,15 @@ def CardSearch(q):
 				#print "DOUBLE FACE ALERT"
 				cimage_small = c['card_faces'][0]['image_uris']['normal']
 				cimage_large = c['card_faces'][0]['image_uris']['png']
+				aimage_small = c['card_faces'][1]['image_uris']['normal']
+				aimage_large = c['card_faces'][1]['image_uris']['png']
+
+				n = Card(c['name'], c['set'], ot, cimage_small, cimage_large)
+				cardList.append(n)
+
+				a = Card(c['name'], c['set'], ot, aimage_small, aimage_large)
+				cardList.append(a)
+				continue
 			else:
 				cimage_small = c['image_uris']['normal']
 				cimage_large = c['image_uris']['png']
