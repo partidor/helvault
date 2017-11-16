@@ -21,9 +21,9 @@ $(document).ready(function () {
 	$('.card-holder').droppable({
 		drop:function(event, ui) 
 		{
-			var b = document.getElementById("slide_deck");
-			var s = b.getElementsByClassName("card-spacer")[0].cloneNode();
-			var h = b.getElementsByClassName("card-holder")[0].cloneNode();
+			var b = $('#slide_deck')
+			var s = b.children().next('.card-spacer')[0].cloneNode();
+			var h = b.children().next('.card-holder:not(.card-selected)')[0].cloneNode();
 			ui.draggable = ui.draggable.clone();
 			if($(this).find('img').length)
 			{
@@ -48,9 +48,14 @@ $(document).ready(function () {
 		over:function(event, ui)
 		{
 			//add elements
-			var b = document.getElementById("slide_deck");
-			var s = b.getElementsByClassName("card-spacer")[0].cloneNode();
-			var h = b.getElementsByClassName("card-holder")[0].cloneNode();
+
+			var b = $('#slide_deck')
+			var s = b.children().next('.card-spacer')[0].cloneNode();
+			var h = b.children().next('.card-holder:not(.card-selected)')[0].cloneNode();
+			console.log(b);
+			console.log(s);
+			console.log(h);
+
 			console.log('spacer over');
 			console.log($(this));
 			$(this).after(s);
