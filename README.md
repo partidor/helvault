@@ -33,8 +33,6 @@ Helvault features currently planned are:
 
 > Deck-list importer
 >
-> Large Display Image background color picker
->
 > Cleaner/ More modern UI
 >
 > Improved image caching

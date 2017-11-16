@@ -84,14 +84,15 @@ body {
 
 .style-navbar {
 	font-family: 'Helvetica', sans-serif;
-	background-color: #1D3461;
+	background-color: #1c607d;
 	color: #F0F7F4;
 }
 
 .style-search-bar {
-	font-family: 'Open Sans', sans-serif;
-	background-color: #247BA0;
+	font-size: 1em;
+	font-family: 'Helvetica', sans-serif;
 	color: #F0F7F4;
+	background-color: #1c607d;
 }
 
 .style-card-area {
@@ -106,8 +107,12 @@ body {
 .style-oracle-text {
 	border:1px solid #9CAEA9;
 	background-color: #F0F7F4;
+	color: #000000;
 }
 
 .style-display-image {
 	background-color: #247BA0;
+	font-size: 1em;
+	font-family: 'Helvetica', sans-serif;
+	color: #F0F7F4;
 }
