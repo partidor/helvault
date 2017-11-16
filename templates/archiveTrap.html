@@ -3,7 +3,7 @@
 {% block body %}
 
 <div class="container-fluid mx-auto w-100" style="overflow-y:none;">
-	<div class="row h-100 w-100" style="background-color: #247BA0; overflow-y:none; position:fixed; ">
+	<div class="row h-100 w-100 style-display-image" style="overflow-y:none; position:fixed; ">
 		<div class="col-9 m-0 p-0 w-100" style="background-color: lightblue;">
 			<div class="row mx-auto h-100" style="background-color: orange;">
 				<div class="col-8 mx-auto px-0 w-100 style-card-area" style="margin-bottom: 200px; overflow-y: scroll; overflow-x: none;">
@@ -11,18 +11,24 @@
 						<!--<form action="{{ url_for('search') }}" method="post" class="form-inline">-->
 							<!-- <form action="{{ url_for('search') }}" method="post" class="form-inline">-->
 							<div id="search_area" class="form-group row w-100 pt-1">
-								<label for="scryfall_search_box" class="align-middle col-3" style="padding-top: 10px;">Search Scryfall:&nbsp;&nbsp;</label>
+								<label for="scryfall_search_box" class="align-middle col-3" style="padding-top: 10px;">Search Scryfall&nbsp;&nbsp;</label>
 								<input type="text" class="form-control col-9" id="scryfall_search_box" name="search_string" placeholder="Example: id=w cmc<=3">
 							</div>
 						<!--</form>-->
 					</div>
 					<div id="place_for_cards" class="row mx-auto" style="margin-bottom: 80px;"></div>
 				</div>
-				<div id="oracle-text-box" class="col mx-0 oracle-font style-oracle-text" style="padding-top: 15px; padding-bottom: 50px; margin-bottom: 200px; overflow-y:scroll;">
+				<div id="center-row-holder" class="col px-0">
+				<div id="oracle-text-box" class="row w-100 mx-0 oracle-font style-oracle-text" style="height: 60%; padding: 15px; padding-bottom: 70px; overflow-y:scroll;">
+				</div>
+				<div class="row w-100 mx-0 align-bottom style-display-image" style="padding-left: 15px; padding-top: 5px; height: 80px; margin-bottom: 214px; overflow-y:scroll;">
+					BG Color Picker 
+					<input type="text" id="color_input_box" name="input_string" placeholder="#247BA0" style="height: 30px; margin-left: 10px; padding-top: 0px; width: 50%;">
+				</div>
 				</div>
 			</div>
 		</div>
-		<div class="col" style="height:420px;">
+		<div class="col" class="style-display-image" style="height:420px;">
 			<div class="row h-100 w-100 m-0 style-display-image">
 				<img id="large-image-box" class="card-display-large rounded" src="{{url_for('static', filename='images/Helvault-Logo.jpg')}}">
 			</div>

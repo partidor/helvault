@@ -84,14 +84,15 @@ body {
 
 .style-navbar {
 	font-family: 'Helvetica', sans-serif;
-	background-color: #1D3461;
+	background-color: #1c607d;
 	color: #F0F7F4;
 }
 
 .style-search-bar {
-	font-family: 'Open Sans', sans-serif;
-	background-color: #247BA0;
+	font-size: 1em;
+	font-family: 'Helvetica', sans-serif;
 	color: #F0F7F4;
+	background-color: #1c607d;
 }
 
 .style-card-area {
@@ -110,4 +111,7 @@ body {
 
 .style-display-image {
 	background-color: #247BA0;
+	font-size: 1em;
+	font-family: 'Helvetica', sans-serif;
+	color: #F0F7F4;
 }
