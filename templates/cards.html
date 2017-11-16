@@ -1,5 +1,5 @@
 <label id="card_data">
-	<div class="row mx-auto mb-0">
+	<div class="row mx-auto mb-0" style="padding-left: 15px;">
 	{% for card in cards %}
 	<div class="col-3 px-1 pt-3">
 		<!--<div class="content" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:146px; height:204px;">-->
@@ -11,7 +11,7 @@
 
 		{% if loop.index % 4 == 0 %}
 </div>
-<div class="row mx-auto" style="margin-top:4em;">
+<div class="row mx-auto" style="margin-top:4em; padding-left: 15px;">
 		{% endif %}
 	{% endfor %}
 </div>
