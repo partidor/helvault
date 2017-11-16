@@ -25,7 +25,27 @@ Since this is a tool for the community, it made sense to make Helvault open sour
 
 A current working version of Helvault will always be available at [helvault.com](https://www.helvault.com) for content creators to use. If you feel like running Helvault on your own, all you need to download is [Python Flask](http://flask.pocoo.org/) and the Helvault source code. 
 
+
+Incoming Features
+----------------------------------------
+
+Helvault features currently planned are:
+
+> Deck-list importer
+>
+> Large Display Image background color picker
+>
+> Cleaner/ More modern UI
+>
+> Improved image caching
+
+
+Thanks
+---------------------------------------
+
 I wanted to give a huge thank you to the MTG community for providing countless hours of entertaining and educational content. Hopefully Helvault is a sufficient thank you, as well as a decent tool to help others create more of the content that our community loves. 
+
+Also, a special thanks to [Scryfall](https://scryfall.com/) for opening up their API and inspiring this project. You guys run the best MTG search engine around.
 
 All of the best, and happy creating!
 
