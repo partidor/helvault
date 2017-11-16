@@ -65,13 +65,13 @@ def CardSearch(q):
 			if 'image_uris' in c['card_faces'][0]:
 				#print "DOUBLE FACE ALERT"
 				cimage_small = c['card_faces'][0]['image_uris']['normal']
-				cimage_large = c['card_faces'][0]['image_uris']['large']
+				cimage_large = c['card_faces'][0]['image_uris']['png']
 			else:
 				cimage_small = c['image_uris']['normal']
-				cimage_large = c['image_uris']['large']
+				cimage_large = c['image_uris']['png']
 		else:
 			cimage_small = c['image_uris']['normal']
-			cimage_large = c['image_uris']['large']
+			cimage_large = c['image_uris']['png']
 
 		n = Card(c['name'], c['set'], ot, cimage_small, cimage_large)
 		cardList.append(n)

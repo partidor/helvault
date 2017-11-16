@@ -49,10 +49,10 @@ body {
 	width: 300px;
 	height: 429px;
 	*/
-	width: 14em;
-	height: 20em;
+	width: 17em;
+	height: 24em;
 	margin: auto;
-	margin-top: 3em;
+	margin-top: 1em;
 	vertical-align: middle;
 	display:block;
 }
@@ -72,12 +72,12 @@ body {
 }
 
 .card-selected {
-	border:1px solid #FF6347;
+	border:2px solid #FF6347;
 	border-radius: .70rem!important;
 	margin-top: 4px;
 	/*margin-left: 15px;*/
-	height: 206px;
-	width: 146px;
+	height: 208px;
+	width: 148px;
 }
 
 .style-navbar {
