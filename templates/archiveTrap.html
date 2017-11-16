@@ -10,9 +10,9 @@
 					<div class="w-100 style-search-bar" style="height: 50px; padding-left: 10px;">
 						<!--<form action="{{ url_for('search') }}" method="post" class="form-inline">-->
 							<!-- <form action="{{ url_for('search') }}" method="post" class="form-inline">-->
-							<div id="search_area" class="form-group row w-100 pt-1">
-								<label for="scryfall_search_box" class="align-middle col-3" style="padding-top: 10px;">Search Scryfall&nbsp;&nbsp;</label>
-								<input type="text" class="form-control col-9" id="scryfall_search_box" name="search_string" placeholder="Example: id=w cmc<=3">
+							<div id="search_area" class="row w-100 justify-content-center align-items-center" style="padding-top: 5px;">
+								Search Scryfall
+								<input type="text" class="form-control col-9" id="scryfall_search_box" name="search_string" placeholder="Example: id=w cmc<=3" style="margin-left: 10px;">
 							</div>
 						<!--</form>-->
 					</div>
@@ -21,9 +21,9 @@
 				<div id="center-row-holder" class="col px-0">
 				<div id="oracle-text-box" class="row w-100 mx-0 oracle-font style-oracle-text" style="height: 60%; padding: 15px; padding-bottom: 70px; overflow-y:scroll;">
 				</div>
-				<div class="row w-100 mx-0 align-bottom style-display-image" style="padding-left: 15px; padding-top: 5px; height: 80px; margin-bottom: 214px; overflow-y:scroll;">
+				<div class="row w-100 mx-0 justify-content-center align-items-center style-display-image" style="height: 50px; position:absolute; bottom:214px;">
 					BG Color Picker 
-					<input type="text" id="color_input_box" name="input_string" placeholder="#247BA0" style="height: 30px; margin-left: 10px; padding-top: 0px; width: 50%;">
+					<input type="text" id="color_input_box" class="form-control" name="input_string" placeholder="#247BA0" style="height: 30px; margin-left: 10px; width: 50%;">
 				</div>
 				</div>
 			</div>
