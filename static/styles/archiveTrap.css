@@ -73,7 +73,7 @@ body {
 
 .card-selected {
 	border:1px solid #FF6347;
-	border-radius :.50rem!important;
+	border-radius: .70rem!important;
 	margin-top: 4px;
 	/*margin-left: 15px;*/
 	height: 206px;

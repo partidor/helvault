@@ -29,7 +29,7 @@ def CardSearch(q):
 
 	url=urlparse.urlunsplit((parse.scheme, parse.netloc, parse.path, user_url, parse.fragment))
 
-	print url
+	#print url
 
 	resp = urllib.urlopen(url)
 
@@ -37,7 +37,7 @@ def CardSearch(q):
 
 	#print json.dumps(data, indent=4)
 	if data['object'] == "error":
-		print 'ERROR'
+		#print 'ERROR'
 		return cardList
 
 	for c in data['data']:
@@ -63,7 +63,7 @@ def CardSearch(q):
 
 		if 'card_faces' in c:
 			if 'image_uris' in c['card_faces'][0]:
-				print "DOUBLE FACE ALERT"
+				#print "DOUBLE FACE ALERT"
 				cimage_small = c['card_faces'][0]['image_uris']['normal']
 				cimage_large = c['card_faces'][0]['image_uris']['large']
 			else:
