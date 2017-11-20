@@ -31,9 +31,12 @@ body {
 .card-spacer {
 	width:20px;
 	height: 204px;
-	margin:0;
+	margin-top: 5px;
 	display:inline-block;
 	float:none;
+	border: 1px solid black;
+	border-radius :.50rem!important;
+	background-color: #247BA0; 
 	/* DEBUG */
 	/*background-color:orange;*/
 }

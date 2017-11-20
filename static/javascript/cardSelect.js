@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 		if (e.shiftKey)
 		{
-			if (!$(this).parent().hasClass('card-selected'))
+			if ($(this).parent().hasClass('card-holder'))
 			{
 				if ($(this).is('img'))
 				{
