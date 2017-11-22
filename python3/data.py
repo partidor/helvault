@@ -20,7 +20,6 @@ class Card:
 		self.s_img = s_img
 		self.l_img = l_img
 
-#def CardSearch(url):
 def CardSearch(q):
 	cardList = []
 
@@ -33,15 +32,12 @@ def CardSearch(q):
 
 	url = urlunsplit((parse.scheme, parse.netloc, parse.path, user_url, parse.fragment))
 
-	#print url
 
 	resp = urlopen(url)
 
 	data = json.loads(resp.read().decode('utf-8'))
 
-	#print json.dumps(data, indent=4)
 	if data['object'] == "error":
-		#print 'ERROR'
 		return cardList
 
 	for c in data['data']:
@@ -67,7 +63,6 @@ def CardSearch(q):
 
 		if 'card_faces' in c:
 			if 'image_uris' in c['card_faces'][0]:
-				#print "DOUBLE FACE ALERT"
 				cimage_small = c['card_faces'][0]['image_uris']['normal']
 				cimage_large = c['card_faces'][0]['image_uris']['png']
 				aimage_small = c['card_faces'][1]['image_uris']['normal']
@@ -88,9 +83,6 @@ def CardSearch(q):
 
 		n = Card(c['name'], c['set'], ot, cimage_small, cimage_large)
 		cardList.append(n)
-
-	##for c in cardList:
-	##	print c.name, c.set_name, c.oracle_text, c.s_img, c.l_img
 
 	return cardList
 
