@@ -2,11 +2,9 @@
 	<div class="row mx-auto mb-0" style="padding-left: 15px;">
 	{% for card in cards %}
 	<div class="col-3 px-1 pt-3">
-		<!--<div class="content" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:146px; height:204px;">-->
 		<div data-draggable="target" class="card-source" style="height: 9em; width: 13em;">
 			<img src={{card.l_img}} alt={{card.name}} oracle="{{card.oracle_text}}" data-draggable="item" class="card-draggable figure-img rounded card-display zoom card-click">
 		</div>
-		<!--</div>-->
 	</div>
 
 		{% if loop.index % 4 == 0 %}

@@ -1,7 +1,0 @@
-#48A9A6 Verdigris
-#32292F Jet - Nav
-#99E1D9 Pale Robin Egg Blue
-#16425B Japanese Indigo - Search, Deck
-#F0F7F4 Anti-Flash White - Cards, Oracle
-#9CAEA9 - Dark Med Gray
-#CCDAD1 - Light Gray

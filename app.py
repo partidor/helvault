@@ -3,25 +3,42 @@ from flask import Flask, render_template, url_for, request
 from data import CardSearch
 import os
 
+######
+# Helvault
+# File: app.py
+# Author: Partidor
+#
+# app.py is the main flask application file for Helvault. app.py serves
+# the files for the index page of Helvault, as well as the serarch functionatliy.
+#
+# Flask uses Jinja as it's html templating language, and are the objects that
+# the app.route functions return.
+######
+
+# Main Application variable (Flask standard)
 
 app = Flask(__name__)
 
+# Route for main index page of helvault
+
 @app.route('/')
 def index():
-	#search_string = request.form['search_string']
-	#Process search string -> url for Scryfall API
-	#Cards = CardSearch('')
-	#return render_template('archiveTrap.html')
-	return render_template('archiveTrap.html')
+	# Default path for templates is ./templates/
+	return render_template('helvault.html')
 
+# On user query, javascript sends this URL a POST with the scryfall search string
 @app.route('/search', methods=['GET', 'POST'])
 def search():
+	# jsdata holds the search term in plain text
 	search_string = request.args.get('jsdata')
-	#print search_string
-	#Process search string -> url for Scryfall API
-	Cards = CardSearch(search_string)
-	return render_template('cards.html', cards = Cards)
+	# CardSearch is imported from data.py - returns a list of card objects - see data.py for
+	# more details
+	cards = CardSearch(search_string)
+	# Returns the cards.html render template with the cards variable set to our new list
+	# of retrieved cards
+	return render_template('cards.html', cards = cards)
 
+# The following is some boilerplate refresh code for Flask. 
 @app.context_processor
 def overide_url_for():
     return dict(url_for=dated_url_for)
@@ -35,5 +52,6 @@ def dated_url_for(endpoint, **values):
             values['q'] = int(os.stat(file_path).st_mtime)
     return url_for(endpoint, **values)
 
+# If run as ./app.py, run in debug mode
 if __name__ == '__main__':
 	app.run(debug=True)

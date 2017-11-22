@@ -1,10 +1,17 @@
+/*	Helvault
+ *	File: helvault.css
+ *	Author: Partidor
+ *	
+ *	CSS for Helvault. Some inline styling is used currently, so not
+ *	all styling is included here.
+ *
+ *	Current styling breaks Helvault scrolling on Firefox.
+ *
+ */
 body {
 	width: 100%;
 	margin: 0;
 	height: 100%;
-	/*
-	overflow-y:none;
-	*/
 	overflow: hidden;
 	position: absolute;
 	
@@ -21,10 +28,6 @@ body {
 	border-radius: .70rem!important;
 	width: 9em;
 	height: 13em;
-	/*
-	width: 10em;
-	height: 14em;
-	*/
 }
 
 .card-holder {
@@ -52,12 +55,6 @@ body {
 
 .card-display-large {
 	border-radius: .90rem!important;
-	/*
-	width: 300px;
-	height: 429px;
-	width: 17em;
-	height: 24em;
-	*/
 	width: 95%;
 	height: auto;
 	margin: auto;
@@ -72,10 +69,8 @@ body {
 }
 
 .card-holder {
-	/* border:1px solid black; */
 	border-radius :.50rem!important;
 	margin-top: 4px;
-	/*margin-left: 15px;*/
 	height: 204px;
 	width: 143px;
 }
@@ -84,7 +79,6 @@ body {
 	border:2px solid #FF6347;
 	border-radius: .70rem!important;
 	margin-top: 4px;
-	/*margin-left: 15px;*/
 	height: 208px;
 	width: 148px;
 }

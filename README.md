@@ -34,8 +34,6 @@ Helvault features currently planned are:
 > Deck-list importer
 >
 > Cleaner/ More modern UI
->
-> Improved image caching
 
 
 Thanks
