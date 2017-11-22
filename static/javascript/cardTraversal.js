@@ -17,7 +17,7 @@ $(document).ready(function () {
 						var oracle_text = nextSlide.find('img').attr('oracle');
 						var large_img = nextSlide.find('img').attr('src');
 						$('#oracle-text-box').html(oracle_text);
-						$('#large-image-box').attr('src', large_img+d.getTime());
+						$('#large-image-box').attr('src', large_img);
 					}
 				}
 				else {
@@ -31,7 +31,7 @@ $(document).ready(function () {
 							var oracle_text = firstCard.find('img').attr('oracle');
 							var large_img = firstCard.find('img').attr('src');
 							$('#oracle-text-box').html(oracle_text);
-							$('#large-image-box').attr('src', large_img+d.getTime());
+							$('#large-image-box').attr('src', large_img);
 						}
 					}
 				}
@@ -54,7 +54,7 @@ $(document).ready(function () {
 						var oracle_text = nextSlide.find('img').attr('oracle');
 						var large_img = nextSlide.find('img').attr('src');
 						$('#oracle-text-box').html(oracle_text);
-						$('#large-image-box').attr('src', large_img+d.getTime());
+						$('#large-image-box').attr('src', large_img);
 
 					}
 				}
@@ -69,7 +69,7 @@ $(document).ready(function () {
 							var oracle_text = firstCard.find('img').attr('oracle');
 							var large_img = firstCard.find('img').attr('src');
 							$('#oracle-text-box').html(oracle_text);
-							$('#large-image-box').attr('src', large_img+d.getTime());
+							$('#large-image-box').attr('src', large_img);
 						}
 					}
 				}

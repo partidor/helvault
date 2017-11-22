@@ -19,7 +19,7 @@ $(document).ready(function () {
 			$('#oracle-text-box').html(oracle_text);
 
 			var large_img = $(this).attr('src');
-			$('#large-image-box').attr('src', large_img+d.getTime());
+			$('#large-image-box').attr('src', large_img);
 
 			if($(this).parent().hasClass('card-holder')){
 				$(this).parent().addClass('card-selected');
