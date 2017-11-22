@@ -30,11 +30,6 @@ body {
 	height: 13em;
 }
 
-.card-holder {
-	/* DEBUG */
-	/*background-color: green;*/
-}
-
 .card-spacer {
 	width:20px;
 	height: 204px;
