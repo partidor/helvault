@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-        return render_template('archiveTrap.html')
+        return render_template('helvault.html')
 
 @app.route('/search', methods=['GET', 'POST'])
 def search():
